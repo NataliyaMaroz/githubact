@@ -7,5 +7,9 @@ jobs:
     steps:
       - name: echo message
         run: echo "Hello, ${{ vars.MY_NAME }}"
+  surname:
+  needs: myfirstjob
+      runs-on: ubuntu-latest
+      steps:
       - name: Print surname
         run: echo "My surname is ${{ secrets.MY_SURNAME }}"
