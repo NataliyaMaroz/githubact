@@ -8,4 +8,4 @@ jobs:
       - name: echo message
         run: echo "Hello, ${{ vars.MY_NAME }}"
       - name: Print surname
-        run: echo "${{ secrets.MY_SURNAME }}"
+        run: echo "My surname is ${{ secrets.MY_SURNAME }}"
