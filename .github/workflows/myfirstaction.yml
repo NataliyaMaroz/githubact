@@ -3,8 +3,11 @@ on: workflow_dispatch
 jobs:
   myfirstjob:
     runs-on: ubuntu-latest
+    environment: test-env
     steps:
       - name: Print "Greetings"
         run: echo "Hello me, I guess"
       - name: Print "Congratulations"
-        run: echo "From Nataliya Maroz"
+        run: echo "From me"
+      - name: echo message
+        run: echo "Hello, ${{ vars.MY_NAME }}"
