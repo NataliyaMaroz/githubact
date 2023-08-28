@@ -5,9 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: test-env
     steps:
-      - name: Print "Greetings"
-        run: echo "Hello me, I guess"
-      - name: Print "Congratulations"
-        run: echo "From me"
       - name: echo message
         run: echo "Hello, ${{ vars.MY_NAME }}"
+      - name: Print surname
+        run: echo "${{ secrets.MY_SURNAME }}"
